@@ -7,7 +7,6 @@ export default async () => {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    //mongodb://root:MlKWsZzGc1Ji@3.217.3.17:27017/?authSource=admin&readPreference=primary&appname=MongoDB%20Compass&ssl=false
     mongoose.set('useCreateIndex', true);
   } catch (e) {
     console.error(`Couldn't connect to the database: ${e}`);
