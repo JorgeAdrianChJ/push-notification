@@ -6,7 +6,7 @@ import initializeRoutes from './routes';
 import webpush from './config/webpush';
 
 const app = express();
-const port = 8080; // default port to listen
+const port = process.env.PORT || '3000'; // default port to listen
 
 app.use(express.static(path.join(__dirname, '../client')));
 app.use(bodyParser.json());
