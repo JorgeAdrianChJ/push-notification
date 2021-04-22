@@ -11,7 +11,7 @@ const port = 8080; // default port to listen
 app.use(express.static(path.join(__dirname, '../client')));
 app.use(bodyParser.json());
 
-database();
+//database();
 initializeRoutes(app);
 webpush();
 
