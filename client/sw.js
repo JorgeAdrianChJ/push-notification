@@ -12,7 +12,7 @@ self.addEventListener('push', (e) => {
 	});
 });
 self.addEventListener('notificationclick', function (event) {
-	const url = event.action ? event.action : event.notification.data;
+	const url = event.action ? event.action : event.notification.data.url;
 	if (url) {
 		event.notification.close();
 		event.waitUntil(clients.openWindow(url));
